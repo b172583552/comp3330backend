@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS USERS (
  JobTitle TEXT NOT NULL,
  Place TEXT NOT NULL,
  JobDetails TEXT NOT NULL,
- JobTime DATETIME DEFAULT ON UPDATE, 
+ JobTime DATETIME DEFAULT current_timestamp, 
  FOREIGN KEY (UserID) references USERS(ID));
  
  """)
