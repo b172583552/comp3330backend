@@ -8,7 +8,7 @@ app = flask.Flask(__name__)
 
 
 # app.config["DEBUG"] = True # Enable debug mode to enable hot-reloader.
-@app.route('/jobs')
+@app.route('/jobs', methods=["GET", "POST"])
 def job():
     if request.method == "POST":
         con = sqlite3.connect('caretaker.db')
